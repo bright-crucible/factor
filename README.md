@@ -1,5 +1,7 @@
 # factor
-Various implementations of integer factoring
+Various implementations of integer factoring. So far there is only a 
+simple and threading version in Python 2. Will probably look into a
+Python 2 version that uses multiprocessing later.
 
 ## simple-factor.py
 The simple implementation of integer factoring in Python 2.
@@ -7,6 +9,7 @@ Simply change the value of N to select what value to factor.
 Ultimately prints a list of tuples containing each factor pair.
 
 $ #for N=pow(2,50)
+
 $ time ./simple-factor.py > /dev/null
 
 real    0m10.614s
@@ -22,6 +25,7 @@ This is due to the GIL.
 Details on GIL: http://www.dabeaz.com/python/UnderstandingGIL.pdf
 
 $ #for N=pow(2,50)
+
 $ time ./threading-factor.py > /dev/null
 
 real    0m21.520s
